@@ -25,7 +25,7 @@
 
 .right h1{
     font-size: 2rem;
-    margin:0;
+    margin:0 0 2.5%;
 }
 
 .right p{
@@ -36,7 +36,7 @@
 
 .form-first,.form-second{
     width:70%;
-    padding:1.8%;
+    padding:1.7%;
     margin:2% auto;
     font-size: small;
 }
@@ -46,7 +46,7 @@
 .form-first label{
     display:block;
     text-align: left;
-    padding: 1% 0;
+    padding: 1.3% 0;
 }
 
 .form-first input{

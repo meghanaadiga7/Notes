@@ -1,5 +1,8 @@
+body{
+     background-color: black;
+}
+
 .signup-main{
-    font-family: Roboto;
     height:100vh;
     overflow: hidden;
     display:flex;
@@ -14,6 +17,7 @@
     background-size:cover;
     background-position:center;
     background-repeat: no-repeat;
+   
 }
 
 .right{

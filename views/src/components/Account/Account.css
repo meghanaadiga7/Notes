@@ -1,0 +1,73 @@
+.account-main{
+    height:100vh;
+    overflow: hidden;
+    display:flex;
+    padding: 0;
+    margin:0; 
+}
+
+.first-account{
+    width:50%;
+    background-image:url("/Green_Wallpaper.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+.second-account{ 
+    width:50%;
+    padding:1%;
+    margin:1%;
+    color:white;
+    text-align: left;
+    display:flex;
+    flex-direction: column;
+    gap:50px;
+}
+
+.account-form img{
+    width:3rem;
+    height:3rem;
+    border-radius: 100%;
+    margin:1%;
+    display: block;
+}
+
+.account-form label{
+  margin:1% 1% 0;
+  display:block;
+
+}
+
+.account-form input{
+    width:50%;
+    height:1.8rem;
+    margin:1% 1% 1%;
+    border-radius: 7px;
+    background-color:rgb(35, 34, 34);
+    border:1px solid rgb(63, 63, 63);
+    outline:none;
+    font-size: smaller;
+    transition:transform 0.2s ease, box-shadow 0.2s ease
+}
+
+.account-profile{
+    cursor: pointer;
+}
+
+.account-btn{
+    width:50%;
+    margin:1%;
+   height:1.8rem;
+   border-radius: 7px;
+   background-color: rgb(20, 110, 96);
+   border:1.5px solid  rgb(20, 110, 96);
+   color:white;
+   outline:none;
+   transition:transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.account-btn:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}

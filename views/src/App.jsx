@@ -4,9 +4,11 @@ import Welcome from "./components/Welcome/Welcome";
 import ForgotPassword from "./components/Signup/ForgotPassword";
 import ResetPassword from "./components/Signup/ResetPassword";
 import NoteSetPage from "./components/NoteSetPage/NoteSetPage";
+import Account from "./components/Account/Account";
+
 function App() {
   return (
-   <NoteSetPage></NoteSetPage>
+   <Account></Account>
   );
 }
 export default App;

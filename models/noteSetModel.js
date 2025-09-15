@@ -26,6 +26,5 @@ noteSetSchema.virtual("notes",{
 })
 
 
-
 const NoteSet=mongoose.model("NoteSet",noteSetSchema);
 module.exports=NoteSet;

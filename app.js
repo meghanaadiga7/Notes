@@ -27,8 +27,8 @@ app.use(helmet());
 app.use(express.json());
 
 //Sanitization
-//app.use(mongoSanitize());
-//app.use(xss());
+app.use(mongoSanitize());
+app.use(xss());
 
 //Routes
 app.use("/api/v1/notes/users",userRouter);

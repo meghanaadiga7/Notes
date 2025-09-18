@@ -52,6 +52,14 @@ userSchema.virtual("notesets",{
     foreignField:"user",
     localField:"_id"
 })
+
+userSchema.pre(/^find/,function(next){
+    this.populate({
+        path:"notesets",
+        select:"noteSetTitle"
+    })
+    next();
+})
 userSchema.pre("save",async function(next){
     if(!this.isModified("password")){
        return next();

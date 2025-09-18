@@ -25,6 +25,13 @@ noteSetSchema.virtual("notes",{
     localField:"_id"
 })
 
+noteSetSchema.pre(/^find/,function(next){
+    this.populate({
+        path:"notes",
+        select:"noteName"
+    });
+    next();
+})
 
 const NoteSet=mongoose.model("NoteSet",noteSetSchema);
 module.exports=NoteSet;

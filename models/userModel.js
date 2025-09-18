@@ -42,8 +42,16 @@ const userSchema=new mongoose.Schema({
         default:"user",
         select:false
     }
+},{
+    toJSON:{virtuals:true},
+    toObject:{virtuals:true}
 });
 
+userSchema.virtual("notesets",{
+    ref:"NoteSet",
+    foreignField:"user",
+    localField:"_id"
+})
 userSchema.pre("save",async function(next){
     if(!this.isModified("password")){
        return next();

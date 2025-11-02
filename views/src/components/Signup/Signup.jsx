@@ -1,6 +1,7 @@
 import "./Signup.css";
 import SignupForm from "./SignupForm";
 function Signup(){
+    
     return (
         <section className="signup-main">
             <div className="left"></div>

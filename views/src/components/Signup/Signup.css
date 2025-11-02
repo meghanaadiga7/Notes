@@ -65,12 +65,12 @@ body{
     transition:transform 0.2s ease, box-shadow 0.2s ease
 }
 
-input:hover{
+.form-first input:hover{
     border:1.5px solid  rgb(20, 110, 96);
     transform:scale(1.05);
 }
 
-input:focus{
+.form-first input:focus{
     border:1.5px solid  rgb(20, 110, 96);
     transform: scale(1.05);
 }

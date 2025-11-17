@@ -1,14 +1,33 @@
 import "./NoteSet.css";
-function NoteSetHeader(){
-    return (
-    <section className="note-header">
-        <div className="note-container">
-            <button className="note-btn">Logout</button>
-            <img className="user-image" src="./default.jpg" alt="user-image"></img>
-            <button className="note-btn">User</button>
-        </div>
-    </section>
-    )
+import { useNavigate } from "react-router-dom";
+function NoteSetHeader() {
+	const navigate = useNavigate();
+	async function logoutHandler(e) {
+		e.preventDefault();
+		try {
+			const res = await fetch("http://localhost:8087/api/v1/notes/users/logout");
+			const data = await res.json();
+			if (res.ok) {
+				navigate("/");
+			} else {
+				console.log(data.message);
+				alert(data.message || "Logout failed");
+			}
+		} catch (err) {
+			console.log(err);
+			alert("Something went wrong!Try again");
+		}
+	}
+
+	return (
+		<section className="note-header">
+			<div className="note-container">
+				<button onClick={logoutHandler} className="note-btn">
+					Logout
+				</button>
+			</div>
+		</section>
+	);
 }
 
 export default NoteSetHeader;

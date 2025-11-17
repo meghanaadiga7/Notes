@@ -1,57 +1,80 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-.main{
-    background-image:url("/Green_Wallpaper.jpg");
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: black;
-    height:100vh;
-    overflow: hidden;
-    padding: 0;
-    margin:0;
+.main {
+	background-image: url("/Green_Wallpaper.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: black;
+	height: 100vh;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;
 }
 
-.welcome{
-    color:#ffff;
-   text-align: center;
-   margin-top:10%;
+.welcome {
+	color: #ffff;
+	text-align: center;
+	margin-top: 10%;
 }
 
-.welcome h1{
-   font-size: 3.2rem;
-   margin:0
+.welcome h1 {
+	font-size: 3.2rem;
+	margin: 0;
 }
 
-.welcome p{
-    font-size:medium;
-    color:rgb(246, 243, 239);
+.welcome p {
+	font-size: medium;
+	color: rgb(246, 243, 239);
 }
 
-.buttons{
-  display:flex;
-  gap:16px;
-  height:30vh;
-  justify-content: center;
-  align-items: center;
-  min-width: auto;
+.buttons {
+	display: flex;
+	gap: 16px;
+	height: 30vh;
+	justify-content: center;
+	align-items: center;
+	min-width: auto;
 }
 
-.btn{
-    padding:16px 100px;
-    font-size: 14px;
-    cursor:pointer;
-    background-color:black;
-    color:rgb(246, 243, 239);
-    border-radius: 1rem;
-    border:0.5px solid rgb(246, 243, 239);
-    transition:transform 0.2s ease, box-shadow 0.2s ease;
+.btn {
+	padding: 16px 100px;
+	font-size: 14px;
+	cursor: pointer;
+	background-color: black;
+	color: rgb(246, 243, 239);
+	border-radius: 1rem;
+	border: 0.5px solid rgb(246, 243, 239);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn:hover{
-    transform:scale(1.05);
-    border: 1px solid rgb(20, 110, 96);
-    box-shadow: 0 6px 8px rgb(20, 110, 96);
-    color:rgb(20, 110, 96);
+.btn:hover {
+	transform: scale(1.05);
+	border: 1px solid rgb(20, 110, 96);
+	box-shadow: 0 6px 8px rgb(20, 110, 96);
+	color: rgb(20, 110, 96);
 }
 
+.alert {
+	position: fixed;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	z-index: 9999;
+	color: #fff;
+	font-size: 1.8rem;
+	font-weight: 400;
+	text-align: center;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 1.6rem 15rem;
+	-webkit-box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+	box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.25);
+}
+.alert--success {
+	background-color: #20bf6b;
+}
+.alert--error {
+	background-color: #eb4d4b;
+}

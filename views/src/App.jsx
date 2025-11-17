@@ -16,7 +16,7 @@ function App() {
       <Route path="/login" element={<Login/>}/>
       <Route path="/forgot-password" element={<ForgotPassword/>}/>
       <Route path="/reset-password" element={<ResetPassword/>}/>
-      <Route path="/noteset/id" element={<NoteSetPage/>}/>
+      <Route path="/noteset" element={<NoteSetPage/>}/>
       <Route path="/notelist" element={<NoteList/>}/>
     </Routes>
    </Router>

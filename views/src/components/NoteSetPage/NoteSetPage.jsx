@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import NoteSetHeader from "./NoteSetHeader";
 import NoteTitleModel from "./NoteTitleModel";
+import trash from "/trash.png";
 function NoteSetPage() {
 	const navigate = useNavigate();
 	const [noteSets, setNoteSets] = useState([]);
@@ -46,9 +47,8 @@ function NoteSetPage() {
 						onClick={(e) => {
 							e.stopPropagation();
 							deleteNoteSet(el._id);
-						}}
-						className="noteset-delete">
-						-
+						}}>
+						<img src={trash} alt="delete-icon" className="noteset-delete"></img>
 					</div>
 				</button>
 			</li>

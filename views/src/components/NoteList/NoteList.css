@@ -56,6 +56,9 @@
 }
 
 .note-list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	background-color: rgb(11, 91, 101);
 	padding: 1.5%;
 	border: 1.5px solid rgb(11, 91, 101);
@@ -72,4 +75,14 @@
 
 .strike {
 	text-decoration: line-through;
+}
+
+.delete-note {
+	width: 18px;
+	height: 18px;
+	opacity: 0.6;
+}
+
+.delete-note:hover {
+	opacity: 1;
 }

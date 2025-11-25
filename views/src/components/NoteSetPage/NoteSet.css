@@ -79,7 +79,8 @@
 	position: absolute;
 	bottom: 8px;
 	right: 10px;
-	font-size: 40px;
+	width: 25px;
+	height: 25px;
 	opacity: 0.6;
 }
 

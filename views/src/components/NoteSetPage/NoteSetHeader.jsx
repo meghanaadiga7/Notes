@@ -8,6 +8,7 @@ function NoteSetHeader() {
 			const res = await fetch("http://localhost:8087/api/v1/notes/users/logout");
 			const data = await res.json();
 			if (res.ok) {
+				localStorage.removeItem("jwt");
 				navigate("/");
 			} else {
 				console.log(data.message);

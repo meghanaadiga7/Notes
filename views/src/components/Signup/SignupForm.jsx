@@ -29,6 +29,7 @@ function SignupForm() {
 			});
 			data = await res.json();
 			if (res.ok) {
+				localStorage.setItem("jwt", data.token);
 				navigate("/noteset");
 			} else {
 				alert(data.message);

@@ -1,104 +1,100 @@
-body{
-     background-color: black;
+body {
+	background-color: black;
 }
 
-.signup-main{
-    height:100vh;
-    overflow: hidden;
-    display:flex;
-    padding: 0;
-    margin:0;
-    
+.signup-main {
+	height: 100vh;
+	overflow: hidden;
+	display: flex;
+	padding: 0;
+	margin: 0;
 }
 
-.left{
-    width:50%;
-    background-image:url("/Green_Wallpaper.jpg");
-    background-size:cover;
-    background-position:center;
-    background-repeat: no-repeat;
-   
+.left {
+	width: 50%;
+	background-image: url("/Green_Wallpaper.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
-.right{
-    width:50%;
-    padding:5%;
-    color:white;
-    text-align: center;
+.right {
+	width: 50%;
+	padding: 5%;
+	color: white;
+	text-align: center;
 }
 
-.right h1{
-    font-size: 2rem;
-    margin:0 0 2.5%;
+.right h1 {
+	font-size: 2rem;
+	margin: 0 0 2.5%;
 }
 
-.right p{
-    font-size:small;
-    padding-bottom: 2%;
+.right p {
+	font-size: small;
+	padding-bottom: 2%;
 }
 
-
-.form-first,.form-second{
-    width:70%;
-    padding:1.7%;
-    margin:2% auto;
-    font-size: small;
+.form-first,
+.form-second {
+	width: 70%;
+	padding: 1.7%;
+	margin: 2% auto;
+	font-size: small;
 }
 
-
-
-.form-first label{
-    display:block;
-    text-align: left;
-    padding: 1.3% 0;
+.form-first label {
+	display: block;
+	text-align: left;
+	padding: 1.3% 0;
 }
 
-.form-first input{
-    width:100%;
-    color:white;
-    height:2rem;
-    margin:1.2% 0 4%;
-    border-radius: 7px;
-    background-color:rgb(35, 34, 34);
-    border:1px solid rgb(63, 63, 63);
-    outline:none;
-    font-size: smaller;
-    transition:transform 0.2s ease, box-shadow 0.2s ease
+.form-first input {
+	width: 100%;
+	color: white;
+	height: 2rem;
+	margin: 1.2% 0 4%;
+	border-radius: 7px;
+	background-color: rgb(35, 34, 34);
+	border: 1px solid rgb(63, 63, 63);
+	outline: none;
+	font-size: smaller;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.form-first input:hover{
-    border:1.5px solid  rgb(20, 110, 96);
-    transform:scale(1.05);
+.form-first input:hover {
+	border: 1.5px solid rgb(20, 110, 96);
+	transform: scale(1.05);
 }
 
-.form-first input:focus{
-    border:1.5px solid  rgb(20, 110, 96);
-    transform: scale(1.05);
+.form-first input:focus {
+	border: 1.5px solid rgb(20, 110, 96);
+	transform: scale(1.05);
 }
 
-.form-button{
-   width:100%;
-   height:2.5rem;
-   border-radius: 7px;
-   background-color: rgb(20, 110, 96);
-   border:1.5px solid  rgb(20, 110, 96);
-   color:white;
-   outline:none;
-   transition:transform 0.2s ease, box-shadow 0.2s ease;
+.form-button {
+	width: 100%;
+	height: 2.5rem;
+	border-radius: 7px;
+	background-color: rgb(11, 91, 101);
+	border: 1.5px solid rgb(11, 91, 101);
+	color: white;
+	outline: none;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.form-button:hover{
-    transform: scale(1.05);
-    cursor: pointer;
+.form-button:hover {
+	transform: scale(1.05);
+	cursor: pointer;
 }
 
-.anchor{
-    color: rgb(20, 110, 96);
+.anchor {
+	color: rgb(20, 110, 96);
 }
 
-.forgot-password{
-    display:block;
-    text-align: right;
-    font-size: smaller;
-    color: rgb(20, 110, 96);
+.forgot-password {
+	display: block;
+	text-align: right;
+	font-size: smaller;
+	color: rgb(20, 110, 96);
 }

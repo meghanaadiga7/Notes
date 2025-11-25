@@ -27,6 +27,7 @@ function LoginForm() {
 			});
 			data = await res.json();
 			if (res.ok) {
+				localStorage.setItem("jwt", data.token);
 				navigate("/noteset");
 			} else {
 				console.log(data);

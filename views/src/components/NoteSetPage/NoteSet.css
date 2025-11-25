@@ -1,42 +1,171 @@
-
-.note-header{
-    background-image:url("/Green_Wallpaper.jpg");
-    background-size:cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width:100%;
-    height:10vh;
+.note-header {
+	background-image: url("/Green_Wallpaper.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 10vh;
 }
 
-
-.note-container{
-    height:10vh;
-    display: flex;
-    align-items:center;
-    justify-content:right;
+.note-container {
+	height: 10vh;
+	display: flex;
+	align-items: center;
+	justify-content: right;
 }
 
-.note-btn{
-   padding:0%;
-   margin-right:4%;
-   font-family: sans-serif;
-   font-size: medium;
-   cursor: pointer;
-   background: transparent;
-   border:none;
-   color:antiquewhite;
-   transition:transform 0.2s ease, box-shadow 0.2s ease;
+.note-btn {
+	padding: 0%;
+	margin-right: 4%;
+	font-family: sans-serif;
+	font-size: medium;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	color: antiquewhite;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.note-btn:hover{
-    transform:scale(1.1);
+.note-btn:hover {
+	transform: scale(1.1);
 }
 
-.user-image{
-    width:2rem;
-    height:2rem;
-    border-radius: 100%;
-    margin:1%;
+.user-image {
+	width: 2rem;
+	height: 2rem;
+	border-radius: 100%;
+	margin: 1%;
 }
 
+.note-set {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 20px;
+	padding: 2%;
+	justify-content: start;
+	width: 100%;
+	box-sizing: border-box;
+	justify-items: start;
+}
 
+.noteset-button {
+	width: 150px;
+	height: 150px;
+	margin: 5%;
+	border-radius: 10%;
+	border: 1px solid rgb(11, 91, 101);
+	color: white;
+	outline: none;
+	background-color: rgb(11, 91, 101);
+	font-size: 16px;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	position: relative;
+}
+
+.noteset-button:hover {
+	border: 1.5px solid white;
+	transform: scale(1.05);
+}
+
+.noteset-update {
+	position: absolute;
+	bottom: 8px;
+	left: 10px;
+	font-size: 40px;
+	opacity: 0.6;
+}
+
+.noteset-delete {
+	position: absolute;
+	bottom: 8px;
+	right: 10px;
+	font-size: 40px;
+	opacity: 0.6;
+}
+
+.noteset-update:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.noteset-delete:hover {
+	cursor: pointer;
+	opacity: 1;
+}
+
+.modal {
+	background-color: rgb(0, 0, 0, 0.4);
+	display: flex;
+	position: fixed;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+	animation: fadeIn 0.25s ease;
+}
+
+.modal-content {
+	width: 50%;
+	background: rgb(245, 241, 241);
+	border-radius: 10px;
+	padding: 5%;
+	transform: translateY(100%);
+	animation: slideUp 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideUp {
+	to {
+		transform: translateY(0);
+	}
+}
+
+.modal-input {
+	width: 100%;
+	padding: 1%;
+	color: white;
+	height: 2.5rem;
+	margin: 1.2% 0 4%;
+	border-radius: 7px;
+	background-color: rgb(35, 34, 34);
+	border: 1px solid rgb(63, 63, 63);
+	outline: none;
+	font-size: smaller;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-input:hover {
+	border: 1.5px solid rgb(20, 110, 96);
+	transform: scale(1.05);
+}
+
+.modalButtons {
+	display: flex;
+}
+
+.modal-button {
+	width: 50%;
+	height: 2.5rem;
+	margin: 2%;
+	border-radius: 7px;
+	background-color: rgb(11, 91, 101);
+	border: 1.5px solid rgb(11, 91, 101);
+	color: rgb(245, 241, 241);
+	outline: none;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.modal-button:hover {
+	transform: scale(1.05);
+	cursor: pointer;
+}

@@ -51,7 +51,7 @@ A full-stack task & note-set management application where users can organize tas
     │   ├── App.jsx
     │   └── main.jsx / index.jsx
     └── package.json
----
+
 ⚙️ Installation & Setup
 1️⃣ Clone the Repository
 git clone <your-repo-link>.git
@@ -87,8 +87,9 @@ npm run dev
 🌐 Frontend runs on:
 
 http://localhost:5173
-
+```
 ---
+
 🧠 Usage Guide
 
 Sign up with username/email and password

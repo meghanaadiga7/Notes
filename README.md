@@ -1,86 +1,79 @@
-Notes – Task Manager
+# 📝 Notes – Task & Noteset Manager
 
-A full-stack task & noteset manager where a user can:
+A full-stack task & note-set management application where users can organize tasks inside custom note sets after authentication.
 
-Sign up or log in
+---
 
-Create note sets for different tasks (ex: Groceries, Workout, Studies)
+## ✨ Features
 
-Inside each note set, list multiple tasks related to that note set
+### 🔐 User Authentication
+- Sign up and log in
+- JWT-protected routes
+- Users can only access their own notes & note sets
 
-Manage (rename, delete, add) both note sets and tasks
+### 🗂 Note Sets
+- Create multiple note sets (e.g., *Groceries*, *Workout*, *Studies*)
+- Rename note sets
+- Delete note sets
 
-🚀 Features
-🔐 Authentication
+### ✅ Tasks Within Each Note Set
+- Add tasks related to that note set
+- Delete individual tasks
+- Structured task listing UI
+---
 
-User sign-up and login
+## 🛠 Tech Stack
 
-Secure & protected routes using JWT
+| Layer | Technologies |
+|------|--------------|
+| **Frontend** | React (Vite), React Router, Axios/Fetch, CSS/Custom Styling |
+| **Backend** | Node.js, Express.js, MongoDB, Mongoose, JWT, dotenv |
 
-Each user sees and manages only their own note sets
+---
 
-🗂 Note Sets
+## 📁 Project Structure
 
-Create multiple note sets for different areas
-
-Rename existing note sets
-
-Delete note sets
-
-✅ Tasks inside Note Sets
-
-Add tasks within each note set
-
-Delete tasks
-
-Organized UI for task listing
-
-🎨 Responsive & Clean UI
-
-Front-end built in React (Vite)
-
-📁 Folder Structure
+```bash
 .
-├── server/                # Node / Express Backend
+├── server/                # Node/Express backend
 │   ├── controllers/
 │   ├── models/
 │   ├── routers/
 │   ├── utils/
 │   ├── server.js
 │   └── package.json
-└── views/                # React frontend (Vite)
+└── views/                # React (Vite) frontend
     ├── src/
     │   ├── components/
     │   │   ├── Account/
     │   │   ├── NoteSetPage/
     │   │   └── Signup/
     │   ├── App.jsx
-    │   └── index.jsx / main.jsx
+    │   └── main.jsx / index.jsx
     └── package.json
-
-⚙️ Setup & Installation
-1️⃣ Clone the repository
+---
+⚙️ Installation & Setup
+1️⃣ Clone the Repository
 git clone <your-repo-link>.git
 cd <project-folder>
 
 2️⃣ Backend Setup
 npm install
 
-
-Create a .env file inside server/:
+Create .env 
 
 PORT=8087
 MONGO_URI=<your-mongo-connection-string>
 JWT_SECRET=<your-jwt-secret>
 CLIENT_URL=http://localhost:5173
 
-Run the backend:
+Start the server:
 
 nodemon server.js
 # or
 npm start
 
-Expected console output:
+✅ Expected Console Output:
 
 Connected to DB
 Listening on port 8087
@@ -90,41 +83,41 @@ cd views
 npm install
 npm run dev
 
-Frontend will run on: http://localhost:5173
 
-🧠 How It Works
+🌐 Frontend runs on:
 
-Sign Up with email/username and password
+http://localhost:5173
 
-Login to access note sets
+---
+🧠 Usage Guide
 
-Create a new Note Set using + button/card
+Sign up with username/email and password
 
-Click a note set to open its task list
+Login to access your note-set dashboard
 
-Add related tasks inside the note set
+Create a Note Set using the + button/card
 
-Delete or rename note sets and tasks
+Click on a note set to open and manage tasks
 
-Logout when done
+Add related Tasks inside the selected set
 
+Click on the note to strike the finished task
 
-📌 Sample Scripts
-server/package.json
-"scripts": {
-  "start": "node server.js",
-  "dev": "nodemon server.js"
-}
+Rename or delete note sets and tasks anytime
 
-client/package.json
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview"
-}
+Click Logout when finished
+
+---
+### Images
 
 <img width="1899" height="993" alt="Screenshot 2025-11-25 223941" src="https://github.com/user-attachments/assets/40825cbf-7d9d-4619-a980-5da064516bd5" />
+
 <img width="1907" height="984" alt="Screenshot 2025-11-25 224025" src="https://github.com/user-attachments/assets/151a2056-76ea-48c8-9ce3-057531c65208" />
+
 <img width="1893" height="997" alt="Screenshot 2025-11-25 224107" src="https://github.com/user-attachments/assets/b3f93249-5772-4c9e-ae86-c0cfaab33a0b" />
+
 <img width="1913" height="987" alt="Screenshot 2025-11-25 224213" src="https://github.com/user-attachments/assets/f21473ac-61a9-4a72-ae90-1e2fedc4e2d0" />
+
 <img width="1876" height="997" alt="Screenshot 2025-11-25 224330" src="https://github.com/user-attachments/assets/09a72cac-f745-432f-9869-7c2ef177d858" />
+
+<img width="1847" height="994" alt="Screenshot 2025-11-26 101658" src="https://github.com/user-attachments/assets/8d0e2d8b-a59f-4546-8f40-565b1bf9f76e" />

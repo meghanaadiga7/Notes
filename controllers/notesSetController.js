@@ -5,11 +5,7 @@ const APIFeatures = require("./../utils/apiFeatures");
 
 exports.getAllNotesSet = catchAsync(async (req, res, next) => {
 	const baseQuery = NoteSet.find({ user: req.user._id });
-	const features = new APIFeatures(baseQuery, req.query)
-		.filter(req.user._id)
-		.sort()
-		.limit()
-		.paginate();
+	const features = new APIFeatures(baseQuery, req.query).filter().sort().limit().paginate();
 	const notesSet = await features.query;
 	res.status(200).json({
 		stat: "success",

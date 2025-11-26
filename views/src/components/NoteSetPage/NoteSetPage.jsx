@@ -9,9 +9,9 @@ function NoteSetPage() {
 	const [noteSets, setNoteSets] = useState([]);
 	const [editing, setEditing] = useState(false);
 	const [editingEl, setEditingEl] = useState("");
+	const token = localStorage.getItem("jwt");
 
 	const deleteNoteSet = async function (id) {
-		const token = localStorage.getItem("jwt");
 		try {
 			const res = await fetch(`http://localhost:8087/api/v1/notes/notesSet/${id}`, {
 				method: "DELETE",
@@ -24,8 +24,7 @@ function NoteSetPage() {
 			const updatedArr = noteSets.filter((el) => el._id != id);
 			setNoteSets(updatedArr);
 		} catch (err) {
-			console.log(err);
-			alert("Couldn't delete the set, Try again later");
+			alert(err);
 		}
 	};
 
@@ -61,21 +60,18 @@ function NoteSetPage() {
 
 	const getNoteSets = async function () {
 		try {
-			const token = localStorage.getItem("jwt");
 			const res = await fetch("http://localhost:8087/api/v1/notes/notesSet", {
 				headers: {
 					"Content-Type": "application/json",
 					Authorization: `Bearer ${token}`,
 				},
 			});
-			if (!res.ok) throw new Error("Request failed");
+			if (!res.ok) throw new Error("Couldn't load the note sets.Try again later!");
 			const data = await res.json();
 			const derivedData = data.data.notesSet;
-			console.log(data);
 			setNoteSets([...derivedData]);
 		} catch (err) {
-			console.log(err);
-			alert("Couldn't load the note sets. Try again later");
+			alert(err);
 		}
 	};
 
@@ -85,7 +81,6 @@ function NoteSetPage() {
 
 	const createNoteSets = async function () {
 		try {
-			const token = localStorage.getItem("jwt");
 			const res = await fetch("http://localhost:8087/api/v1/notes/notesSet", {
 				method: "POST",
 				headers: {
@@ -93,19 +88,17 @@ function NoteSetPage() {
 					Authorization: `Bearer ${token}`,
 				},
 			});
-			if (!res.ok) throw new Error("Request failed");
+			if (!res.ok) throw new Error("Couldn't create the note set. Try again later");
 			const data = await res.json();
 			const newNote = data.data.newNotesSet;
 			setNoteSets((prevNotes) => [newNote, ...prevNotes]);
 		} catch (err) {
-			console.log(err);
-			alert("Couldn't create the note set. Try again later");
+			alert(err);
 		}
 	};
 
 	const submitTitle = async function (newTitle) {
 		try {
-			const token = localStorage.getItem("jwt");
 			const res = await fetch(`http://localhost:8087/api/v1/notes/notesSet/${editingEl._id}`, {
 				method: "PATCH",
 				headers: {
@@ -123,7 +116,7 @@ function NoteSetPage() {
 				);
 			});
 		} catch (err) {
-			console.log(err);
+			alert(err);
 		}
 	};
 

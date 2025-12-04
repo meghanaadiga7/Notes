@@ -20,6 +20,10 @@ const noteSchema = new mongoose.Schema({
 		ref: "User",
 		select: false,
 	},
+	striked: {
+		type: Boolean,
+		default: false,
+	},
 });
 
 const Note = mongoose.model("Note", noteSchema);

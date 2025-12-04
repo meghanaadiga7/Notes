@@ -10,6 +10,13 @@ function NoteList() {
 	const token = localStorage.getItem("jwt");
 	const { id } = useParams();
 
+	const clickHandler = function (id) {
+		const note = notes.find((n) => n._id === id);
+		const newStriked = !note.striked;
+		updateTask(id, newStriked);
+		setNotes((prev) => prev.map((el) => (el._id === id ? { ...el, striked: newStriked } : el)));
+	};
+
 	const deleteTask = async function (noteid) {
 		try {
 			const res = await fetch(
@@ -30,8 +37,35 @@ function NoteList() {
 		}
 	};
 
+	const updateTask = async function (noteid, newStrike) {
+		try {
+			const res = await fetch(
+				`http://localhost:8087/api/v1/notes/notesSet/${id}/notesList/${noteid}`,
+				{
+					method: "PATCH",
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: `Bearer ${token}`,
+					},
+					body: JSON.stringify({
+						striked: newStrike,
+					}),
+				}
+			);
+			if (!res.ok) throw new Error("Couldn't strike the note. Try again later");
+		} catch (err) {
+			alert(err);
+		}
+	};
+
 	const notesList = notes.map((el) => (
-		<Note key={el._id} id={el._id} onSelect={deleteTask} title={el.noteName}></Note>
+		<Note
+			key={el._id}
+			id={el._id}
+			onStrike={clickHandler}
+			onSelect={deleteTask}
+			title={el.noteName}
+			click={el.striked}></Note>
 	));
 
 	const submitNewTask = function (e) {

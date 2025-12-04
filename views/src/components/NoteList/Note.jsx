@@ -1,13 +1,6 @@
 import Card from "./Card";
-import { useState } from "react";
 import trash from "/trash.png";
 function Note(props) {
-	const [clicked, setClicked] = useState(false);
-
-	const clickHandler = function () {
-		setClicked((click) => !click);
-	};
-
 	const deleteHandler = function (id) {
 		props.onSelect(id);
 	};
@@ -18,9 +11,9 @@ function Note(props) {
 				key={props.id}
 				onClick={(e) => {
 					e.stopPropagation();
-					clickHandler();
+					props.onStrike(props.id);
 				}}
-				className={clicked === true ? "strike" : ""}>
+				className={props.click === true ? "strike" : ""}>
 				{props.title}
 			</li>
 			<button
